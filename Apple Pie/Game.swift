@@ -14,15 +14,15 @@ struct Game {
     var guessedLetters: [Character]
     
     var formattedWord: String {
-        var guessedWord : [String] = []
+        var guessedWord = ""
         for letter in word {
             if guessedLetters.contains(letter) {
-                guessedWord.append("\(letter)")
+                guessedWord += "\(letter)"
             } else {
-                guessedWord.append("_")
+                guessedWord += "_"
             }
         }
-        return guessedWord.joined(separator: " ")
+        return guessedWord
     }
     
     mutating func playerGuessed(letter: Character) {

@@ -38,9 +38,7 @@ class ViewController: UIViewController {
     func newRound() {
         if !listOfWords.isEmpty {
             let newWord = listOfWords.removeFirst()
-            currentGame = Game(word: newWord,
-                               incorrectMovesRemaining: incorrectMovesAllowed,
-                               guessedLetters: [])
+            currentGame = Game(word: newWord, incorrectMovesRemaining: incorrectMovesAllowed, guessedLetters: [])
             enableLetterButtons(true)
             updateUI()
         } else {
@@ -57,7 +55,12 @@ class ViewController: UIViewController {
     
     // Update the Game-stats on screen
     func updateUI() {
-        correctWordLabel.text = currentGame.formattedWord
+        var letters = [String]()
+        for letter in currentGame.formattedWord {
+            letters.append(String(letter))
+        }
+        let wordWithSpacing = letters.joined(separator: " ")
+        correctWordLabel.text = wordWithSpacing
         scoreLabel.text = "Wins: \(totalWins), Losses: \(totalLosses)"
         treeImageView.image = UIImage(named: "Tree \(currentGame.incorrectMovesRemaining)")
     }
