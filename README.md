@@ -11,6 +11,6 @@ the player gets seven guesses (represented by the seven apples). Every time a pl
 Here you see the begin-screen: 
 <img src="doc/Begin_Screen.png" width="80%" title="Begin Screen"> 
 
-Getting the right word, will give you one wine. Getting seven guesses wrong, will give you a lose. Your status (how many winns
+Getting the right word, will give you one win. Getting seven guesses wrong, will give you a lose. Your status (how many winns
 and loses) is shown on the screen.
 <img src="doc/Guessing.png" width="80%" title="Guessing"> 
